@@ -12,7 +12,7 @@ after_success:
   - docker build -t kumar003vinod/multi-client ./client/
   - docker build -t kumar003vinod/multi-nginx ./nginx/
   - docker build -t kumar003vinod/multi-server ./server/
-  - docker builf -t kumar003vinod/multi-worker ./worker/
+  - docker build -t kumar003vinod/multi-worker ./worker/
   # Login to docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker images
