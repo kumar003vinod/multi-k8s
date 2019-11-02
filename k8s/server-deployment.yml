@@ -27,6 +27,11 @@ spec:
             - name: PGHOST
               value: postgres-cluster-ip-service
             - name: PGPORT
-              value: 5432
+              value: "5432"
             - name: PGDATABASE
               value: postgres
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: MYPASSWORD
